@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --primary-dark-cyan: hsl(185, 75%, 39%);
+    --primary-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --primary-grayish-blue: hsl(227, 10%, 46%);
+    --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url("./images/bg-pattern-top.svg") -63% 255%, url("./images/bg-pattern-bottom.svg") 152% -220%,  var(--primary-dark-cyan);
+    background-repeat: no-repeat;
+    color: var(--primary-dark-desaturated-blue);
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: grid;
+    place-items: center;
+}
+main{
+    width: 355px;
+    height: 370px;
+    border-radius: 15px;
+    box-shadow: 0 0 50px 5px var(--primary-grayish-blue);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+    z-index: 10;
+}
+.card--profile-background{
+    background: url("./images/bg-pattern-card.svg");
+}
+.card--info{
+    width: 100%;
+    background: #fff;
+    position: relative;
+    padding-top: 4rem;
+}
+.card--info img{
+    position: absolute;
+    border: 10px solid #fff;
+    border-radius: 50%;
+    transform: translate(120px,-125px);
+}
+.card--info__personal--info{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-gap: 0;
+}
+.card--info__personal--info > span{
+    font-size: 14px;
+    color: var(--primary-grayish-blue);
+    padding: 5px 0;
+}
+.card--info__personal--info__name-age{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 0;
+}
+.card--info__personal--info__name-age span:first-child{
+    font-weight: bolder;
+}
+.card--info__personal--info__name-age span:last-child{
+    color: var(--primary-grayish-blue);
+}
+.card-info__profile--info{
+    width: 95%;
+    padding-top: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-info__profile--info li{
+    display: grid;
+}
+.card-info__profile--info li span:first-child{
+    font-weight: bolder;
+    text-align: center;
+}
+.card-info__profile--info li span:last-child{
+    padding: 8px 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--neutral-dark-gray);
+    letter-spacing: 1px;
+}
+@media (max-width:576px){
+    body{
+        background: url("./images/bg-pattern-top.svg") 130% 255% no-repeat, url("./images/bg-pattern-bottom.svg") -20% -205% no-repeat,  var(--primary-dark-cyan);    
+    }
+    main{
+        width: 320px;
+    }
+    .card--info img{
+        transform: translate(100px,-125px);
+    }
+    .card--info__personal--info__name-age{
+        width: 50%;
+    }
+}
