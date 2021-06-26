@@ -15,8 +15,7 @@
 body{
     width: 100%;
     height: 100vh;
-    background: url("./images/bg-pattern-top.svg") -63% 255%, url("./images/bg-pattern-bottom.svg") 152% -220%,  var(--primary-dark-cyan);
-    background-repeat: no-repeat;
+    background: url("./images/bg-pattern-top.svg") -295px -450px no-repeat, url("./images/bg-pattern-bottom.svg") 700px 400px no-repeat,  var(--primary-dark-cyan);
     color: var(--primary-dark-desaturated-blue);
     font-size: 18px;
     font-family: 'Kumbh Sans', sans-serif;
@@ -94,7 +93,7 @@ main{
 }
 @media (max-width:576px){
     body{
-        background: url("./images/bg-pattern-top.svg") 130% 255% no-repeat, url("./images/bg-pattern-bottom.svg") -20% -205% no-repeat,  var(--primary-dark-cyan);    
+        background: url("./images/bg-pattern-top.svg") -720px -557px no-repeat, url("./images/bg-pattern-bottom.svg") 125px 350px no-repeat,  var(--primary-dark-cyan);    
     }
     main{
         width: 320px;
